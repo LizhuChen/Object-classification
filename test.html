@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- Load the latest version of TensorFlow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+  </head>
+  <body>
+  <section id="cameraSection">
+  <h2 id='status'>loading model...</h2> 
+      <div>
+        <button id="enableWebcamButton" disabled>Open the camera</button>
+        <button id="disableWebcamButton" disabled>Close the camera</button>
+      </div>
+        <video id="webcam" autoplay width="320" height="240"></video>
+    <button id="predictBtn" disabled>predict</button>
+    <p id='result'></p>
+	<section id="training">
+	  <button id="class-a" disabled>Add A</button>
+	  <button id="class-b" disabled>Add B</button>
+	  <button id="class-c" disabled>Add C</button>
+	  <button id="reset" disabled>Reset</button>
+	</section>
+	
+  <section id="A_Section">
+  <h1>class-a</h1> 
+	<div id="canvasdivA" style="white-space:nowrap ; width: 660px; height:140px; overflow: auto">
+	</div>
+  </section>
+	
+  <section id="B_Section">
+  <h1>class-b</h1> 
+	<div id="canvasdivB" style=" white-space:nowrap ;width: 660px; height:140px; overflow: auto" >
+	</div>
+  </section>
+
+  <section id="C_Section">
+  <h1>class-c</h1> 
+	<div id="canvasdivC" style="white-space:nowrap ;width: 660px; height:140px; overflow: auto">
+	</div>
+  </section>  
+	
+	
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/knn-classifier"></script>
+
+    <!-- Load js after the content of the page -->
+    <script src="transferLearning.js"></script>
+  </body>
+</html>
